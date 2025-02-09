@@ -1,3 +1,5 @@
+'use client';
+
 const styles = {
   section: 'py-20 px-4 bg-white dark:bg-gray-900',
   container: 'max-w-4xl mx-auto',

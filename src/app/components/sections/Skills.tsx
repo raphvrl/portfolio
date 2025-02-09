@@ -14,6 +14,7 @@ import {
   SiExpo,
   SiPhp,
   SiLaravel,
+  SiPython
 } from 'react-icons/si'
 
 const styles = {
@@ -48,6 +49,7 @@ const technologies = {
     { name: 'C++', icon: SiCplusplus, color: '#00599C' },
     { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
     { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
+    { name: 'Python', icon: SiPython, color: '#3776AB' },
   ],
   "Frontend": [
     { name: 'React', icon: SiReact, color: '#61DAFB' },
