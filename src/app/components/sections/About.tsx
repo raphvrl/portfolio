@@ -4,7 +4,8 @@ const styles = {
   title: 'text-3xl font-bold mb-8 text-gray-900 dark:text-white',
   content: 'space-y-6 text-gray-600 dark:text-gray-300',
   paragraph: 'text-lg leading-relaxed',
-  highlight: 'text-blue-600 dark:text-blue-400 font-semibold'
+  highlight: 'text-blue-600 dark:text-blue-400 font-semibold',
+  list: 'list-disc list-inside mt-2 space-y-2 ml-4'
 };
 
 export default function About() {
@@ -25,16 +26,16 @@ export default function About() {
             me to work effectively in teams and manage complex projects in real-world conditions.
           </p>
 
-          <p className={styles.paragraph}>
+          <div className={styles.paragraph}>
             Throughout the projects, I have gained expertise in:
-            <ul className="list-disc list-inside mt-2 space-y-2 ml-4">
-              <li>Team management and leadership</li>
-              <li>Project organization and planning</li>
-              <li>Communication and collaboration</li>
-              <li>Solving complex problems</li>
-              <li>Adaptability and continuous learning</li>
-            </ul>
-          </p>
+          </div>
+          <ul className={styles.list}>
+            <li>Team management and leadership</li>
+            <li>Project organization and planning</li>
+            <li>Communication and collaboration</li>
+            <li>Solving complex problems</li>
+            <li>Adaptability and continuous learning</li>
+          </ul>
 
           <p className={styles.paragraph}>
             Passionate about <span className={styles.highlight}>emerging technologies</span>{' '}
@@ -44,15 +45,15 @@ export default function About() {
             and understand the underlying mechanisms of systems.
           </p>
 
-          <p className={styles.paragraph}>
+          <div className={styles.paragraph}>
             My interest in video game development, especially in game engines, 
             allows me to deepen my knowledge in:
-            <ul className="list-disc list-inside mt-2 space-y-2 ml-4">
-              <li>Graphics programming and 3D rendering</li>
-              <li>Performance optimization</li>
-              <li>Complex software architecture</li>
-            </ul>
-          </p>
+          </div>
+          <ul className={styles.list}>
+            <li>Graphics programming and 3D rendering</li>
+            <li>Performance optimization</li>
+            <li>Complex software architecture</li>
+          </ul>
         </div>
       </div>
     </section>
