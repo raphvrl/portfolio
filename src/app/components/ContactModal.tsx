@@ -23,20 +23,26 @@ const styles = {
   label: 'block text-sm font-medium text-gray-700 dark:text-gray-300',
   input: `
     w-full px-4 py-2 
-    border border-gray-300 dark:border-gray-700 
+    border-none 
     rounded-lg 
-    focus:outline-none
-    focus:ring-2 focus:ring-blue-500 focus:border-transparent
-    dark:bg-gray-800 dark:text-white
+    outline-none
+    bg-gray-100 dark:bg-gray-800
+    text-gray-900 dark:text-white
+    transition-all duration-200
+    focus:ring-2 focus:ring-blue-500
+    hover:bg-gray-200 dark:hover:bg-gray-700
   `,
   textarea: `
     w-full px-4 py-2 
-    border border-gray-300 dark:border-gray-700 
+    border-none
     rounded-lg 
-    focus:outline-none
-    focus:ring-2 focus:ring-blue-500 focus:border-transparent
+    outline-none
+    bg-gray-100 dark:bg-gray-800
+    text-gray-900 dark:text-white
+    transition-all duration-200
+    focus:ring-2 focus:ring-blue-500
+    hover:bg-gray-200 dark:hover:bg-gray-700
     min-h-[120px] 
-    dark:bg-gray-800 dark:text-white
     resize-y
   `,
   submitButton: `
