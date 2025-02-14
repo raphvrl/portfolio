@@ -23,7 +23,7 @@ export default function About() {
           </p>
 
           <p className={styles.paragraph}>
-            Thanks to Epitech's project-based learning, I have developed strong 
+            Thanks to Epitech&apos;s project-based learning, I have developed strong 
             technical as well as human skills. This unique approach has taught 
             me to work effectively in teams and manage complex projects in real-world conditions.
           </p>

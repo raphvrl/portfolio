@@ -37,7 +37,7 @@ export default function Contact() {
       <div className={styles.container}>
         <h2 className={styles.title}>Contact</h2>
         <p className={styles.subtitle}>
-          Let's connect! Feel free to reach out through any of these platforms.
+          Let&apos;s connect! Feel free to reach out through any of these platforms.
         </p>
         
         <div className={styles.linksContainer}>
