@@ -5,8 +5,8 @@ const styles = {
   container: 'max-w-4xl mx-auto text-center',
   title: 'text-3xl font-bold mb-8 text-gray-900 dark:text-white',
   subtitle: 'text-lg text-gray-600 dark:text-gray-400 mb-12',
-  linksContainer: 'flex justify-center items-center gap-8',
-  link: 'flex items-center gap-2 px-6 py-3 rounded-full bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-gray-800 dark:text-white',
+  linksContainer: 'flex flex-col md:flex-row justify-center items-center gap-8',
+  link: 'w-full md:w-auto flex items-center justify-center md:justify-start gap-2 px-6 py-3 rounded-full bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg hover:scale-105 transition-transform text-gray-800 dark:text-white',
   icon: 'w-5 h-5'
 }
 
@@ -31,11 +31,11 @@ const socials = [
   }
 ]
 
-export default function Contact() {
+export default function FindMe() {
   return (
-    <section id="contact" className={styles.section}>
+    <section id="findme" className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Contact</h2>
+        <h2 className={styles.title}>Find me</h2>
         <p className={styles.subtitle}>
           Let&apos;s connect! Feel free to reach out through any of these platforms.
         </p>

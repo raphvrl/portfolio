@@ -16,10 +16,10 @@ const styles = {
 
 const projects = [
   {
-    title: 'Minecraft Clone',
-    description: 'A Minecraft clone developed in C, using the OpenGL library for graphics. Project under development.',
-    tech: ['C', 'OpenGL'],
-    github: 'https://github.com/raphvrl/C-Minecraft',
+    title: 'Vulkan Minecraft Clone',
+    description: 'A Minecraft clone developed in C++ using Vulkan. Project under development.',
+    tech: ['C++', 'Vulkan', 'GLSL', 'Makefile'],
+    github: 'https://github.com/raphvrl/vk-minecraft-clone',
     status: 'In development'
   },
   {

@@ -19,10 +19,27 @@ const styles = {
     rounded-xl shadow-xl z-50 p-6
     transition-all duration-300 ease-out
   `,
+  mobileMenuButton: 'lg:hidden text-gray-800 dark:text-white hover:scale-110 transition-transform duration-200',
+  mobileMenu: 'lg:hidden fixed inset-0 bg-white/95 dark:bg-gray-950/95 z-40 transition-transform duration-300 ease-in-out',
+  mobileMenuContent: 'flex flex-col items-center justify-center h-full gap-8 text-xl',
+  desktopButtons: 'hidden lg:flex gap-6 items-center',
 };
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#experience', label: 'Professional Experience' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#findme', label: 'Find Me' },
+  ];
+
+  const handleNavLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -32,19 +49,28 @@ export default function Navbar() {
             <a href="#hero" className={styles.logo}>
               RV
             </a>
-            <div className={styles.buttons}>
-              <a href="#about" className={styles.navLink}>
-                About
-              </a>
-              <a href="#projects" className={styles.navLink}>
-                Projects
-              </a>
-              <a href="#experience" className={styles.navLink}>
-                Professional Experience
-              </a>
-              <a href="#skills" className={styles.navLink}>
-                Skills
-              </a>
+
+            <button 
+              className={styles.mobileMenuButton}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {!isMobileMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              )}
+            </button>
+
+            <div className={styles.desktopButtons}>
+              {navLinks.map((link) => (
+                <a key={link.href} href={link.href} className={styles.navLink}>
+                  {link.label}
+                </a>
+              ))}
               <ThemeToggle />
               <button
                 onClick={() => setIsModalOpen(true)} 
@@ -56,6 +82,36 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+
+      {/* Menu Mobile */}
+      <div 
+        className={`${styles.mobileMenu} ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className={styles.mobileMenuContent}>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={styles.navLink}
+              onClick={handleNavLinkClick}
+            >
+              {link.label}
+            </a>
+          ))}
+          <ThemeToggle />
+          <button
+            onClick={() => {
+              setIsModalOpen(true);
+              setIsMobileMenuOpen(false);
+            }}
+            className={styles.secondaryButton}
+          >
+            Contact Me
+          </button>
+        </div>
+      </div>
       
       <ContactModal 
         isOpen={isModalOpen} 
