@@ -23,6 +23,13 @@ const projects = [
     status: 'In development'
   },
   {
+    title: 'AREA',
+    description: 'An action-reaction application using various API services, developed with React, Node.js, and Expo.',
+    tech: ['React', 'Node.js', 'Expo'],
+    github: 'https://github.com/raphvrl/AREA',
+    status: 'Completed'
+  },
+  {
     title: 'Rock Paper Scissors',
     description: 'Rock Paper Scissors game developed with Next.js to explore the features of the framework.',
     tech: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
